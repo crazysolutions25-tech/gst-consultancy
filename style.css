@@ -1,58 +1,141 @@
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #f4f6f8;
-  color: #333;
-  line-height: 1.6;
+  padding: 0;
 }
 
-.hero {
-  background: linear-gradient(135deg, #0a58ca, #084298);
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background: #0a2540;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
   color: white;
-  padding: 70px 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0a58ca, #062a63);
+  color: white;
+  padding: 100px 20px;
   text-align: center;
 }
 
+.hero-content {
+  max-width: 900px;
+  margin: auto;
+}
+
 .hero h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 42px;
+  margin-bottom: 15px;
 }
 
 .hero p {
   font-size: 18px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-.btn {
-  background: white;
+.primary-btn {
+  background: #ffffff;
   color: #0a58ca;
-  padding: 12px 25px;
-  text-decoration: none;
+  padding: 14px 30px;
   border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
 }
 
-section {
+/* SECTIONS */
+.section {
+  padding: 70px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.light {
   background: white;
-  max-width: 900px;
-  margin: 30px auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 40px;
+  color: #0a2540;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-h2 {
+.card h3 {
+  margin-bottom: 12px;
   color: #0a58ca;
-  margin-bottom: 15px;
 }
 
-ul li {
-  margin: 10px 0;
+/* TEXT */
+.center-text {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  font-size: 17px;
 }
 
+/* CONTACT */
+.contact-section {
+  background: #0a2540;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.contact-box {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+/* FOOTER */
 footer {
-  background: #222;
+  background: #06192e;
   color: white;
   text-align: center;
   padding: 20px;
-  margin-top: 40px;
 }
