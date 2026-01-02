@@ -9,12 +9,15 @@
 
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav class="nav">
   <div class="brand">Krish<span>.</span></div>
-  <div class="nav-right">
-    <a href="#contact" class="nav-btn">Get in touch</a>
-  </div>
+  <ul class="nav-menu">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#rules">Rules</a></li>
+    <li><a href="#contact" class="nav-btn">Contact Us</a></li>
+  </ul>
 </nav>
 
 <!-- HERO -->
@@ -25,8 +28,8 @@
       <span>for new-age businesses</span>
     </h1>
     <p>
-      We help startups, founders, and growing businesses
-      stay compliant with GST and tax — without friction.
+      We help startups, founders, and businesses stay compliant
+      with GST and tax — without friction.
     </p>
   </div>
 </section>
@@ -39,48 +42,71 @@
   </h2>
 </section>
 
-<!-- SERVICES (BRAND STYLE, NOT CARDS) -->
-<section class="services">
+<!-- SERVICES -->
+<section id="services" class="services">
   <div class="service reveal">
     <h3>GST Registration</h3>
-    <p>Launch your business with the right GST structure from day one.</p>
+    <p>End-to-end GST registration and amendments.</p>
   </div>
 
   <div class="service reveal">
     <h3>GST Filing & Compliance</h3>
-    <p>Monthly, quarterly, and annual filings handled end-to-end.</p>
+    <p>Monthly, quarterly, and annual GST returns.</p>
   </div>
 
   <div class="service reveal">
     <h3>Income Tax & Advisory</h3>
-    <p>Clear tax planning and filing for founders and professionals.</p>
+    <p>Income tax filing and professional advisory.</p>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about reveal">
-  <!-- NEWS -->
+  <p>
+    Krish Tax Consultancy is built for modern businesses.
+    We combine professional tax expertise with a startup mindset —
+    focused on clarity, speed, and trust.
+  </p>
+</section>
+
+<!-- NEWS -->
 <section id="news" class="news reveal">
-  <!-- DOWNLOADS -->
+  <h2>Latest Updates</h2>
+  <div id="news-list" class="news-list">
+    <p class="news-loading">Loading latest GST & business updates…</p>
+  </div>
+</section>
+
+<!-- DOWNLOADS -->
 <section id="downloads" class="downloads reveal">
-  <!-- SECTIONS & RULES -->
+  <h2>Downloads</h2>
+  <p class="downloads-sub">
+    GST forms, utilities, and useful resources for businesses.
+  </p>
+
+  <div class="download-list">
+    <a href="#" class="download-item">GST Registration Form (REG-01)</a>
+    <a href="#" class="download-item">GSTR-3B Return Utility</a>
+    <a href="#" class="download-item">GSTR-1 Return Utility</a>
+  </div>
+</section>
+
+<!-- RULES -->
 <section id="rules" class="rules reveal">
   <h2>GST & Tax Sections and Rules</h2>
   <p class="rules-sub">
-    Key sections and provisions under GST and Income Tax laws in India.
+    Key provisions under GST and Income Tax laws in India.
   </p>
 
   <div class="accordion">
-
     <div class="accordion-item">
       <button class="accordion-header">
         GST Registration – Section 22 & 24
       </button>
       <div class="accordion-content">
         <p>
-          Section 22 deals with mandatory GST registration based on turnover.
-          Section 24 covers compulsory registration regardless of turnover
-          (e.g., inter-state supply, e-commerce operators).
+          Mandatory and compulsory GST registration provisions
+          based on turnover and business type.
         </p>
       </div>
     </div>
@@ -91,82 +117,12 @@
       </button>
       <div class="accordion-content">
         <p>
-          Section 10 allows eligible taxpayers to opt for a simplified tax
-          scheme with lower rates and reduced compliance.
+          Simplified tax scheme for eligible taxpayers
+          with reduced compliance.
         </p>
       </div>
     </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        GST Returns – Sections 37 to 44
-      </button>
-      <div class="accordion-content">
-        <p>
-          These sections govern filing of outward supplies, monthly/quarterly
-          returns, annual returns, and reconciliation statements.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        Input Tax Credit (ITC) – Section 16
-      </button>
-      <div class="accordion-content">
-        <p>
-          Section 16 defines eligibility and conditions for claiming
-          Input Tax Credit under GST.
-        </p>
-      </div>
-    </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        Income Tax Filing – Section 139
-      </button>
-      <div class="accordion-content">
-        <p>
-          Section 139 mandates filing of income tax returns by individuals,
-          firms, and companies within prescribed due dates.
-        </p>
-      </div>
-    </div>
-
   </div>
-</section>
-
-  <h2>Downloads</h2>
-  <p class="downloads-sub">
-    GST forms, utilities, and useful resources for businesses.
-  </p>
-
-  <div class="download-list">
-    <a href="downloads/GST-REG-01.pdf" class="download-item" download>
-      GST Registration Form (REG-01)
-    </a>
-
-    <a href="downloads/GSTR-3B.xlsx" class="download-item" download>
-      GSTR-3B Return Utility (Excel)
-    </a>
-
-    <a href="downloads/GSTR-1.xlsx" class="download-item" download>
-      GSTR-1 Return Utility
-    </a>
-  </div>
-</section>
-
-  <h2>Latest Updates</h2>
-  <div id="news-list" class="news-list">
-    <p class="news-loading">Loading latest GST & business updates…</p>
-  </div>
-</section>
-
-  <p>
-    Krish Tax Consultancy is built for modern businesses.
-    We combine professional tax expertise with a startup mindset —
-    focused on clarity, speed, and trust.
-  </p>
 </section>
 
 <!-- CTA -->
@@ -177,13 +133,25 @@
 
 <!-- CONTACT -->
 <section id="contact" class="contact reveal">
-  <p><strong>Phone</strong> +91-XXXXXXXXXX</p>
-  <p><strong>Email</strong> support@krishtax.com</p>
+  <p><strong>Mobile</strong></p>
+  <p>
+    <a href="tel:+918977756671">+91 89777 56671</a>
+  </p>
+
+  <p><strong>WhatsApp</strong></p>
+  <p>
+    <a href="https://wa.me/918977756671" target="_blank">
+      Chat on WhatsApp
+    </a>
+  </p>
+
+  <p><strong>Email</strong></p>
+  <p>support@krishtax.com</p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 Krish Tax Consultancy</p>
+  <p>© 2026 Krish Tax Consultancy. All rights reserved.</p>
 </footer>
 
 <script src="script.js"></script>
