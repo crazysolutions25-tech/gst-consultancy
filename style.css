@@ -263,3 +263,40 @@ footer {
   color: var(--muted);
 }
 
+/* DOWNLOADS */
+.downloads {
+  padding: 140px 40px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.downloads-sub {
+  color: var(--muted);
+  margin-bottom: 50px;
+  font-size: 16px;
+}
+
+.download-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.download-item {
+  background: #121622;
+  padding: 18px 22px;
+  border-radius: 14px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.download-item:hover {
+  transform: translateY(-3px);
+  background: #161b2d;
+}
+
