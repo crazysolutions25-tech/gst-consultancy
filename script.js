@@ -1,4 +1,4 @@
-/* REVEAL ON SCROLL */
+/* ================= REVEAL ON SCROLL ================= */
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
@@ -20,7 +20,7 @@ window.addEventListener("load", () => {
   });
 });
 
-/* MOBILE MENU */
+/* ================= MOBILE MENU ================= */
 const menuToggle = document.getElementById("menu-toggle");
 const mobileMenu = document.getElementById("mobile-menu");
 
@@ -36,18 +36,18 @@ if (menuToggle && mobileMenu) {
   });
 }
 
-/* NEWS FETCH */
+/* ================= LIVE NEWS (FIXED) ================= */
 const newsContainer = document.getElementById("news-list");
 
 if (newsContainer) {
   const feeds = [
     {
       source: "GST / CBIC",
-      url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.cbic.gov.in/rss/whatsnew.xml"
+      url: "https://www.cbic.gov.in/rss/whatsnew.xml"
     },
     {
       source: "Business News",
-      url: "https://api.rss2json.com/v1/api.json?rss_url=https://www.business-standard.com/rss/latest.rss"
+      url: "https://www.business-standard.com/rss/latest.rss"
     }
   ];
 
@@ -57,24 +57,36 @@ if (newsContainer) {
 
     for (const feed of feeds) {
       try {
-        const res = await fetch(feed.url);
-        const data = await res.json();
+        const proxyUrl =
+          "https://api.allorigins.win/raw?url=" +
+          encodeURIComponent(feed.url);
 
-        data.items.slice(0, 3).forEach(item => {
+        const response = await fetch(proxyUrl);
+        const text = await response.text();
+
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, "text/xml");
+        const items = xml.querySelectorAll("item");
+
+        items.forEach(item => {
           if (count >= 6) return;
+
+          const title = item.querySelector("title")?.textContent;
+          const link = item.querySelector("link")?.textContent;
 
           const div = document.createElement("div");
           div.className = "news-item";
           div.innerHTML = `
-            <h3>${item.title}</h3>
+            <h3>${title}</h3>
             <p>${feed.source}</p>
-            <a href="${item.link}" target="_blank">Read more →</a>
+            <a href="${link}" target="_blank">Read more →</a>
           `;
+
           newsContainer.appendChild(div);
           count++;
         });
-      } catch (e) {
-        console.error(e);
+      } catch (error) {
+        console.error("News error:", error);
       }
     }
   }
@@ -82,12 +94,12 @@ if (newsContainer) {
   loadNews();
 }
 
-/* ACCORDION */
+/* ================= ACCORDION ================= */
 document.querySelectorAll(".accordion-header").forEach(btn => {
   btn.addEventListener("click", () => {
     const content = btn.nextElementSibling;
     content.style.maxHeight
-      ? content.style.maxHeight = null
-      : content.style.maxHeight = content.scrollHeight + "px";
+      ? (content.style.maxHeight = null)
+      : (content.style.maxHeight = content.scrollHeight + "px");
   });
 });
