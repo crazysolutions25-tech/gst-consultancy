@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crazysolutions25-tech.github.io/gst-consultancy/sitemap.xml
