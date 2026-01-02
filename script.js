@@ -1,3 +1,4 @@
+/* REVEAL ON SCROLL */
 const reveals = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver(
@@ -11,17 +12,15 @@ const observer = new IntersectionObserver(
   { threshold: 0.15 }
 );
 
-// Observe all reveal elements
 reveals.forEach(r => observer.observe(r));
 
-// 🔥 FIX: force hero to show immediately
 window.addEventListener("load", () => {
   document.querySelectorAll(".hero .reveal").forEach(el => {
     el.classList.add("active");
   });
 });
 
-/* AUTO NEWS (GST + BUSINESS) */
+/* NEWS FETCH */
 const newsContainer = document.getElementById("news-list");
 
 if (newsContainer) {
@@ -38,7 +37,7 @@ if (newsContainer) {
 
   async function loadNews() {
     newsContainer.innerHTML = "";
-    let itemsAdded = 0;
+    let count = 0;
 
     for (const feed of feeds) {
       try {
@@ -46,20 +45,20 @@ if (newsContainer) {
         const data = await res.json();
 
         data.items.slice(0, 3).forEach(item => {
-          if (itemsAdded >= 6) return;
+          if (count >= 6) return;
 
           const div = document.createElement("div");
           div.className = "news-item";
           div.innerHTML = `
             <h3>${item.title}</h3>
-            <p>${feed.source} • ${new Date(item.pubDate).toDateString()}</p>
+            <p>${feed.source}</p>
             <a href="${item.link}" target="_blank">Read more →</a>
           `;
           newsContainer.appendChild(div);
-          itemsAdded++;
+          count++;
         });
-      } catch (err) {
-        console.error("News feed error:", err);
+      } catch (e) {
+        console.error(e);
       }
     }
   }
@@ -71,11 +70,9 @@ if (newsContainer) {
 document.querySelectorAll(".accordion-header").forEach(btn => {
   btn.addEventListener("click", () => {
     const content = btn.nextElementSibling;
-
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+    content.style.maxHeight
+      ? content.style.maxHeight = null
+      : content.style.maxHeight = content.scrollHeight + "px";
   });
 });
+
