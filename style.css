@@ -52,7 +52,6 @@ body {
   color: var(--fg);
   text-decoration: none;
   font-weight: 500;
-  font-size: 15px;
 }
 
 .nav-menu a:hover {
@@ -61,6 +60,38 @@ body {
 
 .nav-btn {
   border-bottom: 1px solid var(--accent);
+}
+
+/* MOBILE NAV */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(11,13,18,0.98);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+  z-index: 9998;
+}
+
+.mobile-menu a {
+  font-size: 22px;
+  color: var(--fg);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
 }
 
 /* HERO */
@@ -118,7 +149,6 @@ body {
 }
 
 .hero p {
-  font-size: 18px;
   color: var(--muted);
 }
 
@@ -168,11 +198,6 @@ body {
   background: #121622;
   padding: 28px;
   border-radius: 16px;
-}
-
-.news-loading {
-  text-align: center;
-  color: var(--muted);
 }
 
 /* DOWNLOADS */
@@ -246,7 +271,6 @@ body {
 .contact a {
   color: var(--accent);
   text-decoration: none;
-  font-weight: 500;
 }
 
 /* FOOTER */
@@ -268,7 +292,7 @@ footer {
   transform: translateY(0);
 }
 
-/* WHATSAPP FLOATING BUTTON (BIG & CLEAR) */
+/* WHATSAPP FLOAT (BIG) */
 .whatsapp-float {
   position: fixed;
   bottom: 30px;
@@ -285,10 +309,24 @@ footer {
   text-decoration: none;
   box-shadow: 0 16px 40px rgba(37, 211, 102, 0.55);
   z-index: 9999;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease;
 }
 
 .whatsapp-float:hover {
   transform: scale(1.12);
-  box-shadow: 0 20px 55px rgba(37, 211, 102, 0.7);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    padding: 20px 28px;
+  }
 }
