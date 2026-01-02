@@ -11,4 +11,12 @@ const observer = new IntersectionObserver(
   { threshold: 0.15 }
 );
 
+// Observe all reveal elements
 reveals.forEach(r => observer.observe(r));
+
+// 🔥 FIX: force hero to show immediately
+window.addEventListener("load", () => {
+  document.querySelectorAll(".hero .reveal").forEach(el => {
+    el.classList.add("active");
+  });
+});
