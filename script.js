@@ -20,6 +20,22 @@ window.addEventListener("load", () => {
   });
 });
 
+/* MOBILE MENU */
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("active");
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+    });
+  });
+}
+
 /* NEWS FETCH */
 const newsContainer = document.getElementById("news-list");
 
@@ -75,4 +91,3 @@ document.querySelectorAll(".accordion-header").forEach(btn => {
       : content.style.maxHeight = content.scrollHeight + "px";
   });
 });
-
