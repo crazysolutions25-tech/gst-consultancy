@@ -2,239 +2,151 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Krish Tax Consultancy | GST Services in Srikakulam</title>
+  <title>Krish Tax Consultancy | GST & Tax Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <meta name="description" content="Krish Tax Consultancy provides GST registration, returns filing, income tax and compliance services in Srikakulam, Andhra Pradesh." />
-  <meta name="keywords" content="GST Registration, GST Filing, Income Tax, Srikakulam GST Consultant" />
-  <meta name="author" content="Krish Tax Consultancy" />
+  <meta name="description" content="GST registration, GST returns, and tax compliance services for individuals in India. Krish Tax Consultancy." />
 
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2DKS9KMS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YB2DKS9KMS');
-  </script>
-
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background: #f7f9fc; color: #222; line-height: 1.6; }
-
-    header {
-      background: #ffffff;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    }
-
-    .logo { font-weight: bold; font-size: 18px; }
-
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
-
-    .menu-btn {
-      display: none;
-      font-size: 22px;
-      cursor: pointer;
-    }
-
-    /* Mobile menu */
-    .mobile-nav {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 260px;
-      height: 100%;
-      background: #fff;
-      padding: 20px;
-      transition: 0.3s;
-      box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-      z-index: 2000;
-    }
-
-    .mobile-nav a {
-      display: block;
-      margin: 15px 0;
-      text-decoration: none;
-      color: #333;
-      font-size: 16px;
-    }
-
-    .close-btn {
-      font-size: 22px;
-      cursor: pointer;
-      text-align: right;
-      margin-bottom: 20px;
-    }
-
-    section {
-      padding: 60px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .hero {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 30px;
-    }
-
-    .hero h1 {
-      font-size: 36px;
-      color: #1d4ed8;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #1d4ed8;
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 25px;
-      text-decoration: none;
-      margin-top: 15px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    }
-
-    footer {
-      background: #111827;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      background: #1d4ed8;
-      color: #fff;
-      border: none;
-      padding: 12px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-    }
-
-    @media(max-width: 768px) {
-      nav { display: none; }
-      .menu-btn { display: block; }
-      .hero h1 { font-size: 28px; }
-    }
-  </style>
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-
 <body>
 
-<header>
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
+
+<!-- Header -->
+<header class="header">
   <div class="logo">Krish Tax Consultancy</div>
-  <nav>
-    <a href="#home">Home</a>
+
+  <nav class="nav" id="nav">
+    <button class="close-btn" id="closeNav">✕</button>
     <a href="#services">Services</a>
-    <a href="#importance">GST Importance</a>
+    <a href="#importance">Importance</a>
     <a href="#rules">Rules</a>
     <a href="#downloads">Downloads</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Contact</a>
   </nav>
-  <div class="menu-btn" onclick="openMenu()">☰</div>
+
+  <div class="menu-btn" id="menuBtn">☰</div>
 </header>
 
-<div class="mobile-nav" id="mobileNav">
-  <div class="close-btn" onclick="closeMenu()">✖</div>
-  <a href="#home" onclick="closeMenu()">Home</a>
-  <a href="#services" onclick="closeMenu()">Services</a>
-  <a href="#importance" onclick="closeMenu()">GST Importance</a>
-  <a href="#rules" onclick="closeMenu()">Rules</a>
-  <a href="#downloads" onclick="closeMenu()">Downloads</a>
-  <a href="#contact" onclick="closeMenu()">Contact</a>
-</div>
-
-<section id="home" class="hero">
-  <div>
-    <h1>GST & Tax Services for Individuals</h1>
-    <p>Professional GST registration, returns filing and tax compliance in Srikakulam.</p>
-    <a class="btn" href="https://wa.me/918977756671">Chat on WhatsApp</a>
-  </div>
+<!-- Hero -->
+<section class="hero">
+  <h1>GST & Tax Services Made Simple</h1>
+  <p>Professional GST registration, filing & compliance for individuals</p>
+  <a href="https://wa.me/918977756671" class="btn-primary">Chat on WhatsApp</a>
 </section>
 
-<section id="services">
-  <h2>Our Services</h2><br>
+<!-- Services -->
+<section class="section services-bg" id="services">
+  <h2>Our Services</h2>
+
   <div class="cards">
-    <div class="card">GST Registration</div>
-    <div class="card">GST Returns Filing</div>
-    <div class="card">Income Tax Filing</div>
-    <div class="card">Compliance & Notices</div>
+    <div class="card">
+      <h3>GST Registration</h3>
+      <p>Quick and correct GST registration as per Indian tax laws.</p>
+    </div>
+
+    <div class="card">
+      <h3>GST Returns Filing</h3>
+      <p>Monthly, quarterly and annual GST return filing support.</p>
+    </div>
+
+    <div class="card">
+      <h3>Income Tax Filing</h3>
+      <p>ITR filing for salaried, freelancers and individuals.</p>
+    </div>
+
+    <div class="card">
+      <h3>Notices & Compliance</h3>
+      <p>Handling GST notices and compliance requirements.</p>
+    </div>
   </div>
 </section>
 
-<section id="importance">
-  <h2>Importance of GST</h2>
-  <p>GST ensures transparency, reduces tax burden and simplifies indirect taxation for individuals and businesses.</p>
+<!-- Importance -->
+<section class="section" id="importance">
+  <h2>Why GST Compliance Is Important</h2>
+
+  <p>
+    Goods and Services Tax (GST) compliance is mandatory for eligible individuals
+    and businesses in India. Proper GST compliance helps avoid penalties,
+    interest, and legal issues.
+  </p>
+
+  <ul class="list">
+    <li>Avoid heavy penalties and late fees</li>
+    <li>Build trust with customers and vendors</li>
+    <li>Claim eligible Input Tax Credit (ITC)</li>
+    <li>Required for loans and financial records</li>
+  </ul>
 </section>
 
-<section id="rules">
-  <h2>GST Rules</h2>
-  <p>Timely filing, correct invoicing, and compliance with GST laws help avoid penalties and notices.</p>
+<!-- Rules -->
+<section class="section rules-bg" id="rules">
+  <h2>Important GST Rules</h2>
+
+  <div class="rules">
+    <div class="rule">GST registration mandatory under Section 22 & 24</div>
+    <div class="rule">Monthly / quarterly return filing is compulsory</div>
+    <div class="rule">Late filing attracts penalty and interest</div>
+    <div class="rule">Valid invoices required to claim ITC</div>
+  </div>
 </section>
 
-<section id="downloads">
+<!-- Downloads -->
+<section class="section" id="downloads">
   <h2>Downloads</h2>
-  <p>GST Forms, Guides and PDFs will be available here.</p>
+  <p>Upload files in the <strong>/downloads</strong> folder to show them here.</p>
+
+  <div class="downloads" id="downloadList">
+    <!-- Files auto-loaded -->
+  </div>
 </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Email: contact@crazysolutions.co.in</p>
-  <p>Phone: 8977756671</p>
+<!-- FAQ -->
+<section class="section faq-bg" id="faq">
+  <h2>Frequently Asked Questions</h2>
 
-  <form>
+  <div class="faq-item">
+    <button class="faq-question">Who should register for GST?</button>
+    <div class="faq-answer">Anyone crossing turnover limits or required under law.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">Is GST return filing mandatory?</button>
+    <div class="faq-answer">Yes, even if there is no business activity.</div>
+  </div>
+
+  <div class="faq-item">
+    <button class="faq-question">What happens if GST returns are late?</button>
+    <div class="faq-answer">Late fees and interest will be applied.</div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact-bg" id="contact">
+  <h2>Contact Us</h2>
+
+  <form id="contactForm">
     <input type="text" placeholder="Your Name" required />
-    <input type="email" placeholder="Your Email" required />
-    <textarea rows="4" placeholder="Your Message"></textarea>
-    <button type="submit">Send Message</button>
+    <input type="tel" placeholder="Mobile Number" required />
+    <input type="email" placeholder="Email Address" />
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send via WhatsApp</button>
   </form>
+
+  <p class="contact-info">
+    📞 8977756671 <br />
+    ✉️ contact@crazysolutions.co.in
+  </p>
 </section>
 
 <footer>
-  <p>© 2026 Krish Tax Consultancy | Srikakulam, Andhra Pradesh</p>
+  © 2026 Krish Tax Consultancy
 </footer>
 
-<script>
-  function openMenu() {
-    document.getElementById("mobileNav").style.right = "0";
-  }
-  function closeMenu() {
-    document.getElementById("mobileNav").style.right = "-100%";
-  }
-</script>
-
+<script src="assets/js/main.js"></script>
 </body>
 </html>
