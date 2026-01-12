@@ -1,24 +1,31 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("navLinks");
+const closeMenu = document.getElementById("closeMenu");
+const overlay = document.getElementById("overlay");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-});
+function openMenu() {
+  navLinks.classList.add("active");
+  overlay.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeSidebar() {
+  navLinks.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.style.overflow = "";
+}
+
+hamburger.addEventListener("click", openMenu);
+closeMenu.addEventListener("click", closeSidebar);
+overlay.addEventListener("click", closeSidebar);
 
 /* Contact Form → WhatsApp */
 document.getElementById("contactForm").addEventListener("submit", function(e) {
   e.preventDefault();
+  const name = name.value;
+  const mobile = mobile.value;
+  const message = message.value;
 
-  const name = document.getElementById("name").value;
-  const mobile = document.getElementById("mobile").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-
-  const text = `Hi, I need GST/Tax services.
-Name: ${name}
-Mobile: ${mobile}
-Email: ${email}
-Message: ${message}`;
-
-  window.open(`https://wa.me/918977756671?text=${encodeURIComponent(text)}`, "_blank");
+  const text = `Name: ${name}%0AMobile: ${mobile}%0AMessage: ${message}`;
+  window.open(`https://wa.me/918977756671?text=${text}`, "_blank");
 });
