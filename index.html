@@ -4,149 +4,169 @@
   <meta charset="UTF-8" />
   <title>Krish Tax Consultancy | GST & Tax Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional GST Registration, Returns Filing & Tax Consultancy Services in India" />
 
-  <meta name="description" content="GST registration, GST returns, and tax compliance services for individuals in India. Krish Tax Consultancy." />
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2DKS9KMS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YB2DKS9KMS');
+  </script>
 
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+  </style>
 </head>
-<body>
 
-<!-- Overlay -->
-<div class="overlay" id="overlay"></div>
+<body class="bg-white text-slate-800">
 
-<!-- Header -->
-<header class="header">
-  <div class="logo">Krish Tax Consultancy</div>
-
-  <nav class="nav" id="nav">
-    <button class="close-btn" id="closeNav">✕</button>
-    <a href="#services">Services</a>
-    <a href="#importance">Importance</a>
-    <a href="#rules">Rules</a>
-    <a href="#downloads">Downloads</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <div class="menu-btn" id="menuBtn">☰</div>
+<!-- NAVBAR -->
+<header class="fixed top-0 w-full bg-white shadow z-50">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="font-extrabold text-xl text-teal-700">Krish Tax Consultancy</div>
+    <nav class="hidden md:flex gap-6 font-medium">
+      <a href="#services">Services</a>
+      <a href="#importance">Importance</a>
+      <a href="#rules">GST Rules</a>
+      <a href="#downloads">Downloads</a>
+      <a href="#contact" class="text-white bg-teal-600 px-4 py-2 rounded-lg">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<!-- Hero -->
-<section class="hero">
-  <h1>GST & Tax Services Made Simple</h1>
-  <p>Professional GST registration, filing & compliance for individuals</p>
-  <a href="https://wa.me/918977756671" class="btn-primary">Chat on WhatsApp</a>
-</section>
-
-<!-- Services -->
-<section class="section services-bg" id="services">
-  <h2>Our Services</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3>GST Registration</h3>
-      <p>Quick and correct GST registration as per Indian tax laws.</p>
+<!-- HERO -->
+<section class="pt-32 pb-24 bg-gradient-to-br from-teal-50 to-cyan-50">
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold mb-6">
+        GST & Tax Services Made Simple
+      </h1>
+      <p class="text-lg text-slate-600 mb-8">
+        GST Registration, Returns Filing, Compliance & Tax Consultancy for Individuals and Businesses across India.
+      </p>
+      <div class="flex gap-4">
+        <a href="https://wa.me/918977756671" target="_blank"
+           class="bg-green-500 text-white px-6 py-4 rounded-xl font-semibold">
+          Chat on WhatsApp
+        </a>
+        <a href="#services"
+           class="border-2 border-teal-600 text-teal-700 px-6 py-4 rounded-xl font-semibold">
+          Our Services
+        </a>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>GST Returns Filing</h3>
-      <p>Monthly, quarterly and annual GST return filing support.</p>
-    </div>
-
-    <div class="card">
-      <h3>Income Tax Filing</h3>
-      <p>ITR filing for salaried, freelancers and individuals.</p>
-    </div>
-
-    <div class="card">
-      <h3>Notices & Compliance</h3>
-      <p>Handling GST notices and compliance requirements.</p>
+    <div class="hidden md:block">
+      <img src="https://images.unsplash.com/photo-1554224154-22dec7ec8818"
+           class="rounded-2xl shadow-xl" />
     </div>
   </div>
 </section>
 
-<!-- Importance -->
-<section class="section" id="importance">
-  <h2>Why GST Compliance Is Important</h2>
-
-  <p>
-    Goods and Services Tax (GST) compliance is mandatory for eligible individuals
-    and businesses in India. Proper GST compliance helps avoid penalties,
-    interest, and legal issues.
-  </p>
-
-  <ul class="list">
-    <li>Avoid heavy penalties and late fees</li>
-    <li>Build trust with customers and vendors</li>
-    <li>Claim eligible Input Tax Credit (ITC)</li>
-    <li>Required for loans and financial records</li>
-  </ul>
-</section>
-
-<!-- Rules -->
-<section class="section rules-bg" id="rules">
-  <h2>Important GST Rules</h2>
-
-  <div class="rules">
-    <div class="rule">GST registration mandatory under Section 22 & 24</div>
-    <div class="rule">Monthly / quarterly return filing is compulsory</div>
-    <div class="rule">Late filing attracts penalty and interest</div>
-    <div class="rule">Valid invoices required to claim ITC</div>
+<!-- SERVICES -->
+<section id="services" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-8 rounded-2xl shadow">GST Registration</div>
+      <div class="bg-white p-8 rounded-2xl shadow">GST Returns Filing</div>
+      <div class="bg-white p-8 rounded-2xl shadow">Income Tax Filing</div>
+      <div class="bg-white p-8 rounded-2xl shadow">GST Notices & Audits</div>
+      <div class="bg-white p-8 rounded-2xl shadow">Compliance & Advisory</div>
+      <div class="bg-white p-8 rounded-2xl shadow">Tax Consultation</div>
+    </div>
   </div>
 </section>
 
-<!-- Downloads -->
-<section class="section" id="downloads">
-  <h2>Downloads</h2>
-  <p>Upload files in the <strong>/downloads</strong> folder to show them here.</p>
-
-  <div class="downloads" id="downloadList">
-    <!-- Files auto-loaded -->
+<!-- IMPORTANCE -->
+<section id="importance" class="py-24">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold mb-10 text-center">Importance of GST</h2>
+    <ul class="grid md:grid-cols-2 gap-6 text-lg">
+      <li>✔ Mandatory legal compliance under GST Act</li>
+      <li>✔ Avoid penalties, interest & notices</li>
+      <li>✔ Claim Input Tax Credit (ITC)</li>
+      <li>✔ Required for loans & government tenders</li>
+      <li>✔ Improves business credibility</li>
+      <li>✔ Enables inter-state trade</li>
+    </ul>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="section faq-bg" id="faq">
-  <h2>Frequently Asked Questions</h2>
-
-  <div class="faq-item">
-    <button class="faq-question">Who should register for GST?</button>
-    <div class="faq-answer">Anyone crossing turnover limits or required under law.</div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">Is GST return filing mandatory?</button>
-    <div class="faq-answer">Yes, even if there is no business activity.</div>
-  </div>
-
-  <div class="faq-item">
-    <button class="faq-question">What happens if GST returns are late?</button>
-    <div class="faq-answer">Late fees and interest will be applied.</div>
+<!-- GST RULES -->
+<section id="rules" class="py-24 bg-teal-600 text-white">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold mb-12 text-center">Important GST Rules</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white/10 p-6 rounded-xl">GST Registration Threshold Rules</div>
+      <div class="bg-white/10 p-6 rounded-xl">Return Filing Deadlines</div>
+      <div class="bg-white/10 p-6 rounded-xl">Input Tax Credit Conditions</div>
+      <div class="bg-white/10 p-6 rounded-xl">E-Way Bill Rules</div>
+      <div class="bg-white/10 p-6 rounded-xl">Reverse Charge Mechanism</div>
+      <div class="bg-white/10 p-6 rounded-xl">Penalties for Non-Compliance</div>
+    </div>
   </div>
 </section>
 
-<!-- Contact -->
-<section class="section contact-bg" id="contact">
-  <h2>Contact Us</h2>
-
-  <form id="contactForm">
-    <input type="text" placeholder="Your Name" required />
-    <input type="tel" placeholder="Mobile Number" required />
-    <input type="email" placeholder="Email Address" />
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit">Send via WhatsApp</button>
-  </form>
-
-  <p class="contact-info">
-    📞 8977756671 <br />
-    ✉️ contact@crazysolutions.co.in
-  </p>
+<!-- DOWNLOADS -->
+<section id="downloads" class="py-24">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center mb-10">Downloads</h2>
+    <ul class="space-y-4">
+      <li class="p-4 border rounded-xl">GST Registration Form (REG-01)</li>
+      <li class="p-4 border rounded-xl">GSTR-1 Format</li>
+      <li class="p-4 border rounded-xl">GSTR-3B Format</li>
+      <li class="p-4 border rounded-xl">GST Rate Chart</li>
+    </ul>
+  </div>
 </section>
 
-<footer>
+<!-- CONTACT -->
+<section id="contact" class="py-24 bg-slate-50">
+  <div class="max-w-xl mx-auto px-4">
+    <h2 class="text-3xl font-extrabold mb-8 text-center">Contact Us</h2>
+
+    <form id="whatsappForm" class="space-y-4">
+      <input required placeholder="Your Name" class="w-full p-4 rounded-xl border" />
+      <input required placeholder="Mobile Number" class="w-full p-4 rounded-xl border" />
+      <textarea required placeholder="Your Message" class="w-full p-4 rounded-xl border"></textarea>
+      <button class="w-full bg-teal-600 text-white py-4 rounded-xl font-semibold">
+        Send on WhatsApp
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-6 text-center text-sm text-slate-500">
   © 2026 Krish Tax Consultancy
 </footer>
 
-<script src="assets/js/main.js"></script>
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918977756671" target="_blank"
+   class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-xl">
+  WhatsApp
+</a>
+
+<!-- WHATSAPP FORM SCRIPT -->
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    const name = e.target[0].value;
+    const phone = e.target[1].value;
+    const msg = e.target[2].value;
+
+    const text = `Name: ${name}%0APhone: ${phone}%0AMessage: ${msg}`;
+    window.open(`https://wa.me/918977756671?text=${text}`, "_blank");
+  });
+</script>
+
 </body>
 </html>
