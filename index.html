@@ -5,17 +5,54 @@
   <title>Krish Tax Consultancy | GST & Tax Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- SEO CORE -->
   <meta name="description" content="GST Registration, GST Returns and Income Tax filing services for individuals in Srikakulam, Andhra Pradesh." />
+  <meta name="keywords" content="GST Consultant Srikakulam, GST Registration, GST Returns, Income Tax Filing" />
+  <meta name="author" content="Krish Tax Consultancy" />
+
+  <!-- Open Graph (Facebook / WhatsApp) -->
+  <meta property="og:title" content="Krish Tax Consultancy" />
+  <meta property="og:description" content="Professional GST & Income Tax services for individuals in Srikakulam." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gst.crazysolutionsshop.com" />
+
+  <!-- Google Analytics (GA4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Facebook Pixel -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'XXXXXXXXXXXXXXX');
+    fbq('track', 'PageView');
+  </script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
 
 <!-- NAVBAR -->
 <header class="navbar">
   <div class="logo">Krish Tax Consultancy</div>
 
   <nav class="nav-links" id="navLinks">
+    <button class="close-btn" id="closeMenu">✕</button>
     <a href="#home">Home</a>
     <a href="#services">Services</a>
     <a href="#importance">Why GST</a>
@@ -35,8 +72,8 @@
 <section class="hero" id="home">
   <h1>GST & Income Tax Services<br><span>Made Simple for Individuals</span></h1>
   <p>
-    We help individuals in Srikakulam with GST registration, GST return filing,
-    and income tax compliance in a simple and transparent way.
+    Trusted GST registration, return filing, and income tax services
+    for individuals in Srikakulam, Andhra Pradesh.
   </p>
   <a href="https://wa.me/918977756671" class="btn-primary">Chat on WhatsApp</a>
 </section>
@@ -48,49 +85,34 @@
   <div class="services">
     <div class="service-card">
       <h3>GST Registration</h3>
-      <p>
-        Registering under GST is mandatory for many individuals and professionals.
-        We assist you in obtaining GST registration quickly and correctly.
-      </p>
-      <a href="https://wa.me/918977756671?text=I%20need%20GST%20Registration">Chat on WhatsApp</a>
+      <p>Quick and accurate GST registration as per Indian tax laws.</p>
     </div>
 
     <div class="service-card">
-      <h3>GST Return Filing</h3>
-      <p>
-        Filing GST returns on time is crucial to avoid penalties.
-        We handle monthly, quarterly, and annual GST returns for individuals.
-      </p>
-      <a href="https://wa.me/918977756671?text=I%20need%20GST%20Return%20Filing">Chat on WhatsApp</a>
+      <h3>GST Returns</h3>
+      <p>Monthly, quarterly and annual GST return filing support.</p>
     </div>
 
     <div class="service-card">
       <h3>Income Tax Filing</h3>
-      <p>
-        Accurate income tax filing helps you stay compliant and save taxes.
-        We file returns for salaried, freelance, and self-employed individuals.
-      </p>
-      <a href="https://wa.me/918977756671?text=I%20need%20Income%20Tax%20Filing">Chat on WhatsApp</a>
+      <p>ITR filing for salaried, freelance and self-employed individuals.</p>
     </div>
   </div>
 </section>
 
-<!-- IMPORTANCE OF GST -->
+<!-- IMPORTANCE -->
 <section class="section soft" id="importance">
-  <h2>Why GST Compliance is Important</h2>
-
+  <h2>Importance of GST Compliance</h2>
   <div class="text-block">
     <p>
-      Goods and Services Tax (GST) is a unified tax system introduced to simplify indirect taxation in India.
-      Proper GST compliance ensures smooth business operations and avoids legal issues.
+      GST compliance ensures legal safety, financial transparency,
+      and smooth operations for individuals and professionals.
     </p>
-
     <ul>
-      <li>Legal compliance as per Indian tax laws</li>
-      <li>Avoid penalties, interest, and notices</li>
-      <li>Eligible to claim Input Tax Credit (ITC)</li>
-      <li>Builds credibility with customers and vendors</li>
-      <li>Smooth processing of loans and financial records</li>
+      <li>Avoid penalties and notices</li>
+      <li>Claim input tax credit</li>
+      <li>Improve financial credibility</li>
+      <li>Required for loans and registrations</li>
     </ul>
   </div>
 </section>
@@ -98,52 +120,22 @@
 <!-- RULES -->
 <section class="section" id="rules">
   <h2>GST & Income Tax Rules</h2>
-
   <div class="rules">
-    <div class="rule-item">
-      <h4>GST Registration – Section 22 & 24</h4>
-      <p>
-        These sections define who must register under GST based on turnover and business activities.
-      </p>
-    </div>
-
-    <div class="rule-item">
-      <h4>Input Tax Credit – Section 16</h4>
-      <p>
-        Allows registered taxpayers to claim credit for taxes paid on purchases, subject to conditions.
-      </p>
-    </div>
-
-    <div class="rule-item">
-      <h4>GST Returns – Sections 37 to 44</h4>
-      <p>
-        Governs the filing of GST returns such as GSTR-1, GSTR-3B, and annual returns.
-      </p>
-    </div>
-
-    <div class="rule-item">
-      <h4>Income Tax Return – Section 139</h4>
-      <p>
-        Mandates filing of income tax returns within prescribed due dates.
-      </p>
-    </div>
+    <div class="rule-item">GST Registration – Section 22 & 24</div>
+    <div class="rule-item">Input Tax Credit – Section 16</div>
+    <div class="rule-item">GST Returns – Sections 37 to 44</div>
+    <div class="rule-item">Income Tax Filing – Section 139</div>
   </div>
 </section>
 
 <!-- DOWNLOADS -->
 <section class="section soft" id="downloads">
-  <h2>Downloads & Resources</h2>
-
+  <h2>Downloads</h2>
   <div class="downloads">
-    <a href="#" class="download-item">GST Registration Form (REG-01)</a>
-    <a href="#" class="download-item">GSTR-1 Format</a>
-    <a href="#" class="download-item">GSTR-3B Utility</a>
-    <a href="#" class="download-item">Income Tax Forms</a>
+    <a href="#" class="download-item">GST REG-01</a>
+    <a href="#" class="download-item">GSTR-1</a>
+    <a href="#" class="download-item">GSTR-3B</a>
   </div>
-
-  <p class="note">
-    Download useful GST and Income Tax forms. You can update files anytime.
-  </p>
 </section>
 
 <!-- CONTACT -->
@@ -153,20 +145,19 @@
   <form id="contactForm">
     <input type="text" id="name" placeholder="Your Name" required />
     <input type="tel" id="mobile" placeholder="Mobile Number" required />
-    <input type="email" id="email" placeholder="Email Address" />
-    <textarea id="message" placeholder="How can we help you?" required></textarea>
+    <textarea id="message" placeholder="Your Requirement" required></textarea>
     <button type="submit">Send via WhatsApp</button>
   </form>
 
-  <p class="info">
-    📞 8977756671 <br />
-    ✉️ contact@crazysolutions.co.in <br />
-    📍 Srikakulam, Andhra Pradesh
-  </p>
+  <div class="contact-info">
+    <p>📞 8977756671</p>
+    <p>✉️ contact@crazysolutions.co.in</p>
+    <p>📍 Srikakulam, Andhra Pradesh</p>
+  </div>
 </section>
 
-<footer>
-  © 2026 Krish Tax Consultancy
+<footer class="footer">
+  © 2026 Krish Tax Consultancy. All rights reserved.
 </footer>
 
 <a href="https://wa.me/918977756671" class="whatsapp-float">💬</a>
