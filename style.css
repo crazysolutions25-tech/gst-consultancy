@@ -6,8 +6,8 @@
 }
 
 body {
-  background: #0b0f14;
-  color: #ffffff;
+  background: #f8fafc;
+  color: #1f2937;
   line-height: 1.6;
 }
 
@@ -17,6 +17,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 16px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {
@@ -30,7 +32,7 @@ body {
   right: -100%;
   width: 70%;
   height: 100vh;
-  background: #111827;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -43,43 +45,35 @@ body {
 }
 
 .nav-links a {
-  color: #fff;
+  color: #1f2937;
   text-decoration: none;
   font-size: 18px;
-}
-
-.hamburger {
-  display: block;
-  cursor: pointer;
 }
 
 .hamburger span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #1f2937;
   display: block;
   margin: 5px 0;
 }
 
 /* HERO */
 .hero {
-  padding: 60px 20px;
+  padding: 70px 20px;
   text-align: center;
+  background: #eef2ff;
 }
 
-.hero h1 {
-  font-size: 28px;
-}
-
-.hero span {
-  color: #4f7cff;
+.hero h1 span {
+  color: #4f46e5;
 }
 
 .btn-primary {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 22px;
-  background: #4f7cff;
+  background: #4f46e5;
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
@@ -95,6 +89,10 @@ body {
   margin-bottom: 30px;
 }
 
+.section.soft {
+  background: #ffffff;
+}
+
 /* SERVICES */
 .services {
   display: grid;
@@ -102,16 +100,64 @@ body {
 }
 
 .service-card {
-  background: #111827;
+  background: #ffffff;
   padding: 20px;
   border-radius: 14px;
+  border: 1px solid #e5e7eb;
 }
 
 .service-card a {
-  color: #4f7cff;
+  color: #4f46e5;
   text-decoration: none;
-  display: inline-block;
   margin-top: 10px;
+  display: inline-block;
+}
+
+/* TEXT BLOCK */
+.text-block {
+  max-width: 600px;
+  margin: auto;
+}
+
+.text-block ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+/* RULES */
+.rules {
+  display: grid;
+  gap: 16px;
+}
+
+.rule-item {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+/* DOWNLOADS */
+.downloads {
+  display: grid;
+  gap: 14px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.download-item {
+  background: #eef2ff;
+  padding: 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #4f46e5;
+  text-align: center;
+}
+
+.note {
+  text-align: center;
+  margin-top: 15px;
+  color: #6b7280;
 }
 
 /* CONTACT */
@@ -126,28 +172,22 @@ body {
 .contact textarea {
   padding: 12px;
   border-radius: 8px;
-  border: none;
+  border: 1px solid #d1d5db;
 }
 
 .contact button {
-  background: #4f7cff;
+  background: #4f46e5;
   color: #fff;
   padding: 12px;
   border: none;
   border-radius: 30px;
 }
 
-.info {
-  text-align: center;
-  margin-top: 30px;
-  color: #9aa0aa;
-}
-
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  color: #9aa0aa;
+  color: #6b7280;
 }
 
 /* FLOATING WHATSAPP */
@@ -180,59 +220,4 @@ footer {
   .services {
     grid-template-columns: repeat(3, 1fr);
   }
-}
-
-/* DARK SECTIONS */
-.section.dark {
-  background: #0f172a;
-}
-
-/* TEXT BLOCK */
-.text-block {
-  max-width: 600px;
-  margin: auto;
-}
-
-.text-block ul {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-.text-block li {
-  margin-bottom: 8px;
-}
-
-/* RULES */
-.rules {
-  display: grid;
-  gap: 16px;
-}
-
-.rule-item {
-  background: #111827;
-  padding: 16px;
-  border-radius: 12px;
-}
-
-/* DOWNLOADS */
-.downloads {
-  display: grid;
-  gap: 14px;
-  max-width: 400px;
-  margin: auto;
-}
-
-.download-item {
-  background: #111827;
-  padding: 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  color: #4f7cff;
-  text-align: center;
-}
-
-.note {
-  text-align: center;
-  margin-top: 15px;
-  color: #9aa0aa;
 }
