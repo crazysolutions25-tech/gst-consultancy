@@ -1,25 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact | Krish Tax Consultancy</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | GST Tax Consultancy</title>
+  <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
 
-<header class="nav">
-  <div class="logo">Krish Tax Consultancy</div>
-</header>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <h1 class="logo">GST Tax Consultancy</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="rules.html">Rules & Regulations</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="section">
-  <h1>Contact Us</h1>
+  <!-- Page Title -->
+  <section class="hero">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p>Get professional consultation for GST, Tax & Compliance</p>
+    </div>
+  </section>
 
-  <p>📞 <a href="tel:+918977756671">8977756671</a></p>
-  <p>✉️ <a href="mailto:contact@crazysolutions.co.in">contact@crazysolutions.co.in</a></p>
-  <p>📍 Srikakulam, Andhra Pradesh</p>
+  <!-- Contact Form -->
+  <section class="section">
+    <div class="container">
+      <h3>Request a Consultation</h3>
 
-  <a href="https://wa.me/918977756671" class="primary-btn">Chat on WhatsApp</a>
-</section>
+      <form action="https://formspree.io/f/xbddwlqn" method="POST" class="contact-form">
 
-<footer>© 2026 Krish Tax Consultancy</footer>
+        <label>Full Name</label>
+        <input type="text" name="name" required />
+
+        <label>Email Address</label>
+        <input type="email" name="email" required />
+
+        <label>Phone Number</label>
+        <input type="tel" name="phone" required />
+
+        <label>Message</label>
+        <textarea name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn">Submit</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer">
+      <p>© 2026 GST Tax Consultancy. All Rights Reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
